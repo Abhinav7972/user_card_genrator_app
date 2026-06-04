@@ -9,6 +9,9 @@ const email = document.querySelector('#email');
 const position = document.querySelector('#position');
 const country = document.querySelector('#country');
 const submit = document.querySelector('.btn[type="submit"]');
+let alert = document.querySelector('.alert');
+let alerttext = document.querySelector('.alert p');
+
 
 
 //selction of card-container
@@ -33,8 +36,17 @@ const userManager =
             !position.value.trim() || 
             !country.value.trim()
         ) {
-            alert("Hey bro please fill something!!");
+            alert.style.display = 'block';
+            alerttext.textContent = `Please fill in all fields`;
+
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 2000);
             return; // Stops the function here, preventing addUser() and renderUI()
+        }
+        else
+        {
+            alert.style.display = 'none';
         }
         this.addUser();
         console.log(this.users);

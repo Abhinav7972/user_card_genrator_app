@@ -143,3 +143,27 @@ body
     justify-content: center;
     gap: 8px;
 }
+
+
+
+.alert
+{
+    border:1px solid  rgb(91, 218, 32);
+    border: none;
+    background-color: rgba(218, 32, 32, 0.856);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    height:  40px;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s ease-in;
+    font-size: 18px;
+    display: none;
+}
